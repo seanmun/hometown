@@ -48,18 +48,22 @@
   --shadow-card-hover: 0 2px 4px rgb(34 38 26 / 0.06), 0 10px 24px rgb(34 38 26 / 0.10);
 }
 
-/* ---- Base ---- */
-body {
-  background-color: var(--color-background);
-  color: var(--color-ink);
-  font-family: var(--font-body);
-  -webkit-font-smoothing: antialiased;
-}
+/* ---- Base ----
+   Wrapped in @layer base so Tailwind utility classes (e.g.
+   text-cream on a heading over a photo) can override these. */
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+  }
 
-h1, h2, h3 {
-  font-family: var(--font-display);
-  color: var(--color-forest-dark);
-  letter-spacing: -0.01em;
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    color: var(--color-forest-dark);
+    letter-spacing: -0.01em;
+  }
 }
 
 /* Respect reduced motion — all transitions/animations off */
