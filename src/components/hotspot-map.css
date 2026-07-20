@@ -5,6 +5,11 @@
    ============================================================ */
 
 .hotspot-pin img {
+  /* Explicit size — the site's CSS reset would otherwise let
+     the logo render at its natural dimensions. */
+  width: 38px;
+  height: 38px;
+  max-width: none;
   border-radius: 50%;
   filter: drop-shadow(0 2px 4px rgb(34 38 26 / 0.4));
   transition: transform 0.15s ease;
