@@ -35,17 +35,17 @@ export default async function Home() {
           fill
           priority
           sizes="100vw"
-          className="absolute inset-0 -z-20 object-cover"
+          className="absolute inset-0 -z-20 object-cover object-top"
         />
         <div
           aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-gradient-to-b from-forest-dark/70 via-forest-dark/45 to-forest-dark/70"
+          className="absolute inset-0 -z-10 bg-gradient-to-b from-forest-dark/80 via-forest-dark/55 to-forest-dark/80"
         />
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-6">
-          <h1 className="text-display-lg text-cream sm:text-display-xl">
+          <h1 className="text-display-lg text-cream drop-shadow-md sm:text-display-xl">
             {site.tagline}
           </h1>
-          <p className="max-w-xl text-body-lg text-cream/90">
+          <p className="max-w-xl text-body-lg text-cream drop-shadow-md">
             {site.description}
           </p>
           <div className="mt-2 flex flex-wrap justify-center gap-4">
