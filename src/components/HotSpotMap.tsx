@@ -83,7 +83,8 @@ export default function HotSpotMap({ features }: { features: Feature[] }) {
         const group = L.featureGroup(markers).addTo(map);
         map.fitBounds(group.getBounds().pad(0.3), { maxZoom: 13 });
       } else {
-        map.setView([41.56, -72.65], 10);
+        // No pins yet — rest on the Hudson Valley.
+        map.setView([42.2529, -73.791], 10);
       }
     })();
 

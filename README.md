@@ -37,7 +37,7 @@ Every data file starts with a 👋 comment explaining exactly how to edit it.
    step 1, and the links to your Instagram / TikTok / Facebook posts.
 3. **Put it on the map (optional).** In Google Maps, right-click the
    business and click the coordinates at the top of the menu to copy them.
-   Add them to the entry as `coords: { lat: 41.5623, lng: -72.651 }`
+   Add them to the entry as `coords: { lat: 42.2515, lng: -73.7897 }`
    (first number is lat). The pin appears on the Explore map automatically;
    without coords the business just isn't pinned.
 4. **Pin it to the home page (optional).** Put `featured: true` on the new entry and remove

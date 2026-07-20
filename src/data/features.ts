@@ -48,7 +48,7 @@ export interface Feature {
   slug: string;           // unique, url-safe: "daily-press-cafe"
   businessName: string;   // "The Daily Press Cafe"
   category: Category;
-  location: string;       // "Middletown, CT"
+  location: string;       // "Hudson, NY"
   blurb: string;          // 1–2 friendly sentences
   thumbnail: string;      // "/images/features/daily-press-cafe.jpg"
   links: FeatureLink[];   // at least one; first one is the primary button
@@ -80,7 +80,7 @@ export const features: Feature[] = [
     slug: "daily-press-cafe",
     businessName: "The Daily Press Cafe",
     category: "coffee",
-    location: "Middletown, CT",
+    location: "Hudson, NY",
     blurb:
       "A cozy local favorite serving up incredible coffee, fresh pastries, and good vibes.",
     thumbnail: "/images/features/daily-press-cafe.jpg",
@@ -90,20 +90,20 @@ export const features: Feature[] = [
     ],
     featured: true,
     date: "2026-07-01",
-    coords: { lat: 41.5623, lng: -72.651 },
+    coords: { lat: 42.2515, lng: -73.7897 },
   },
   {
     slug: "example-farm-stand",
     businessName: "Example Farm Stand",
     category: "farm",
-    location: "Portland, CT",
+    location: "Claverack, NY",
     blurb: "Family-run farm stand with the best sweet corn in the valley.",
     thumbnail: "/images/features/example-farm-stand.jpg",
     links: [
       { platform: "facebook", url: "https://www.facebook.com/EXAMPLE" },
     ],
     date: "2026-06-20",
-    coords: { lat: 41.573, lng: -72.641 },
+    coords: { lat: 42.2246, lng: -73.728 },
   },
 ];
 
