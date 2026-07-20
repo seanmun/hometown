@@ -13,13 +13,8 @@ import "./hotspot-map.css";
 import { categoryMeta, type Feature } from "@/data/features";
 import { platformLabels } from "./icons";
 
-/* Same shape as the lucide MapPin icon, colored by CSS. */
-const PIN_SVG = `
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34"
-       fill="currentColor" stroke="var(--color-cream)" stroke-width="1">
-    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
-    <circle cx="12" cy="10" r="3.2" fill="var(--color-accent)" stroke="none"/>
-  </svg>`;
+/* The pin is the compass logo itself. */
+const PIN_HTML = `<img src="/images/logo.png" alt="" width="38" height="38" draggable="false" />`;
 
 function escapeHtml(value: string): string {
   return value
@@ -52,10 +47,10 @@ export default function HotSpotMap({ features }: { features: Feature[] }) {
 
       const icon = L.divIcon({
         className: "hotspot-pin",
-        html: PIN_SVG,
-        iconSize: [34, 34],
-        iconAnchor: [17, 32],
-        popupAnchor: [0, -30],
+        html: PIN_HTML,
+        iconSize: [38, 38],
+        iconAnchor: [19, 19],
+        popupAnchor: [0, -24],
       });
 
       const markers = features

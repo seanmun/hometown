@@ -4,9 +4,14 @@
    globals.css. No need to edit this file.
    ============================================================ */
 
-.hotspot-pin {
-  color: var(--color-primary);
-  filter: drop-shadow(0 2px 3px rgb(34 38 26 / 0.35));
+.hotspot-pin img {
+  border-radius: 50%;
+  filter: drop-shadow(0 2px 4px rgb(34 38 26 / 0.4));
+  transition: transform 0.15s ease;
+}
+
+.hotspot-pin:hover img {
+  transform: scale(1.15);
 }
 
 .hotspot-map .leaflet-popup-content-wrapper {
