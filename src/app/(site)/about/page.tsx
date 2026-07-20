@@ -44,13 +44,13 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-card shadow-card">
+          <div className="relative aspect-square overflow-hidden rounded-card shadow-card">
             <Image
               src={about.story.photo}
               alt={about.story.photoAlt}
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover"
+              className="object-cover object-center"
               priority
             />
           </div>
