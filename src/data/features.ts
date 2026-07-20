@@ -105,6 +105,36 @@ export const features: Feature[] = [
     date: "2026-06-20",
     coords: { lat: 42.2246, lng: -73.728 },
   },
+  {
+    slug: "copper-kettle-tavern",
+    businessName: "The Copper Kettle Tavern",
+    category: "restaurant",
+    location: "Catskill, NY",
+    blurb:
+      "Farm-to-table comfort food and a warm welcome in a candlelit 1800s storefront.",
+    thumbnail: "/images/features/copper-kettle-tavern.jpg",
+    links: [
+      { platform: "instagram", url: "https://www.instagram.com/p/EXAMPLE" },
+      { platform: "facebook", url: "https://www.facebook.com/EXAMPLE" },
+    ],
+    date: "2026-06-05",
+    coords: { lat: 42.2173, lng: -73.8646 },
+  },
+  {
+    slug: "high-falls-overlook",
+    businessName: "High Falls Overlook",
+    category: "hidden-gem",
+    location: "Philmont, NY",
+    blurb:
+      "A ten-minute woodland walk to the tallest waterfall in Columbia County — bring a picnic.",
+    thumbnail: "/images/features/high-falls-overlook.jpg",
+    links: [
+      { platform: "tiktok", url: "https://www.tiktok.com/@hometownhotspots/video/EXAMPLE" },
+      { platform: "instagram", url: "https://www.instagram.com/p/EXAMPLE" },
+    ],
+    date: "2026-05-22",
+    coords: { lat: 42.2481, lng: -73.6504 },
+  },
 ];
 
 /* ------------------------------------------------------------
