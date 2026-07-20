@@ -5,6 +5,7 @@
    features come from src/data/features.ts.
    ============================================================ */
 
+import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/data/site";
 import { home } from "@/data/pages";
@@ -27,13 +28,29 @@ export default async function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="px-4 pt-20 pb-16 text-center sm:px-6 sm:pt-28 sm:pb-24">
+      <section className="relative isolate overflow-hidden px-4 py-28 text-center sm:px-6 sm:py-40">
+        <Image
+          src={home.hero.image}
+          alt={home.hero.imageAlt}
+          fill
+          priority
+          sizes="100vw"
+          className="absolute inset-0 -z-20 object-cover"
+        />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 bg-gradient-to-b from-forest-dark/70 via-forest-dark/45 to-forest-dark/70"
+        />
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-6">
-          <h1 className="text-display-lg sm:text-display-xl">{site.tagline}</h1>
-          <p className="max-w-xl text-body-lg text-ink-soft">{site.description}</p>
+          <h1 className="text-display-lg text-cream sm:text-display-xl">
+            {site.tagline}
+          </h1>
+          <p className="max-w-xl text-body-lg text-cream/90">
+            {site.description}
+          </p>
           <div className="mt-2 flex flex-wrap justify-center gap-4">
             <Button href="#features">Explore Our Videos</Button>
-            <Button href="/work-with-us" variant="secondary">
+            <Button href="/work-with-us" variant="light">
               Work With Us
             </Button>
           </div>

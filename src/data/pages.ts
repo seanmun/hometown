@@ -9,6 +9,12 @@
    ============================================================ */
 
 export const home = {
+  hero: {
+    image: "/images/hero.jpg",
+    imageAlt:
+      "Mikayla and Curtis overlooking a river valley at sunset",
+  },
+
   featuredHeading: "Newest Featured HotSpot",
   featuredEyebrow: "Just dropped",
 
