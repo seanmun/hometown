@@ -6,7 +6,8 @@
    ============================================================ */
 
 import type { Metadata } from "next";
-import { Camera, Compass, Heart, House, Telescope } from "lucide-react";
+import Image from "next/image";
+import { Compass, Heart, House, Telescope } from "lucide-react";
 import { audiences, mission, site, vision } from "@/data/site";
 import { about } from "@/data/pages";
 import { categoryMeta } from "@/data/features";
@@ -43,11 +44,15 @@ export default function AboutPage() {
               ))}
             </div>
           </div>
-          <div className="flex aspect-[4/3] flex-col items-center justify-center gap-4 rounded-card border border-sand bg-parchment p-8 text-center">
-            <Camera className="h-10 w-10 text-ink-soft/50" aria-hidden="true" />
-            <p className="max-w-xs text-sm text-ink-soft italic">
-              {about.story.photoCaption}
-            </p>
+          <div className="relative aspect-[4/5] overflow-hidden rounded-card shadow-card">
+            <Image
+              src={about.story.photo}
+              alt={about.story.photoAlt}
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
       </section>

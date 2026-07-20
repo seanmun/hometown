@@ -61,7 +61,8 @@ export const about = {
       "HomeTown HotSpots exists to help people discover the places that make our community special — while helping the small businesses behind them get the recognition they deserve.",
       "Every feature starts the same way: we show up like real customers, experience a place first-hand, and share the story we find. No scripts, no staged reviews — just genuine moments from the spots that make this community feel like home.",
     ],
-    photoCaption: "Photo of us coming soon — we're usually the ones holding the camera.",
+    photo: "/images/about/mikayla-and-curtis.jpg",
+    photoAlt: "Mikayla and Curtis, mics in hand, in the woods of the Hudson Valley",
   },
 
   missionHeading: "Our Mission",
