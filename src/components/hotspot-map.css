@@ -1,0 +1,31 @@
+/* ============================================================
+   HotSpot map — small style overrides so the Leaflet map
+   matches the site. Colors come from the design tokens in
+   globals.css. No need to edit this file.
+   ============================================================ */
+
+.hotspot-pin {
+  color: var(--color-primary);
+  filter: drop-shadow(0 2px 3px rgb(34 38 26 / 0.35));
+}
+
+.hotspot-map .leaflet-popup-content-wrapper {
+  border-radius: 10px;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  box-shadow: var(--shadow-card-hover);
+  font-family: var(--font-body);
+}
+
+.hotspot-map .leaflet-popup-tip {
+  background: var(--color-surface);
+}
+
+.hotspot-map .leaflet-popup-content {
+  margin: 14px 18px;
+  line-height: 1.5;
+}
+
+.hotspot-map .leaflet-container a.leaflet-popup-close-button {
+  color: var(--color-ink-soft);
+}

@@ -1,26 +1,98 @@
+/* ============================================================
+   HomeTown HotSpots — Design Tokens (Tailwind v4)
+   src/app/globals.css
+
+   Palette derived from the approved desktop/mobile mockups.
+   The logo keeps its own teal/orange — those are NOT UI colors.
+   ============================================================ */
+
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* ---- Color ---- */
+  --color-cream: #f7f3ea;        /* page background */
+  --color-parchment: #efe9dc;    /* alternating section background */
+  --color-sand: #e4dbc8;         /* borders, dividers, input borders */
+  --color-forest: #4a5233;       /* primary: buttons, header, banners */
+  --color-forest-dark: #2e3320;  /* headings, footer background */
+  --color-clay: #b08856;         /* accent: secondary CTAs, icon pops */
+  --color-ink: #22261a;          /* body text */
+  --color-ink-soft: #5c614d;     /* muted text, captions, labels */
+
+  /* Semantic aliases — components use these, not raw colors */
+  --color-background: var(--color-cream);
+  --color-surface: #fdfbf6;      /* cards sitting on cream */
+  --color-primary: var(--color-forest);
+  --color-primary-hover: #3c4429;
+  --color-accent: var(--color-clay);
+  --color-accent-hover: #9a7546;
+  --color-error: #9b4a35;        /* form validation messages */
+
+  /* ---- Type ----
+     Wired via next/font in layout.tsx (see snippet at bottom). */
+  --font-display: var(--font-playfair);   /* headlines */
+  --font-body: var(--font-figtree);       /* everything else */
+  --font-script: var(--font-caveat);      /* "Follow Your Compass" moments ONLY */
+
+  /* Type scale */
+  --text-display-xl: 3.25rem;   /* home hero */
+  --text-display-lg: 2.25rem;   /* page titles */
+  --text-display-md: 1.625rem;  /* section headings */
+  --text-body-lg: 1.125rem;     /* intro paragraphs */
+
+  /* ---- Shape & depth ---- */
+  --radius-card: 14px;
+  --radius-button: 8px;
+  --radius-input: 8px;
+  --shadow-card: 0 1px 2px rgb(34 38 26 / 0.05), 0 4px 14px rgb(34 38 26 / 0.07);
+  --shadow-card-hover: 0 2px 4px rgb(34 38 26 / 0.06), 0 10px 24px rgb(34 38 26 / 0.10);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ---- Base ---- */
+body {
+  background-color: var(--color-background);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+h1, h2, h3 {
+  font-family: var(--font-display);
+  color: var(--color-forest-dark);
+  letter-spacing: -0.01em;
+}
+
+/* Respect reduced motion — all transitions/animations off */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* ============================================================
+   FONT WIRING — paste into src/app/layout.tsx
+   ============================================================
+
+import { Playfair_Display, Figtree, Caveat } from "next/font/google";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+const figtree = Figtree({
+  subsets: ["latin"],
+  variable: "--font-figtree",
+  display: "swap",
+});
+const caveat = Caveat({
+  subsets: ["latin"],
+  variable: "--font-caveat",
+  display: "swap",
+});
+
+// on <html>:
+// <html lang="en" className={`${playfair.variable} ${figtree.variable} ${caveat.variable}`}>
+
+   ============================================================ */
